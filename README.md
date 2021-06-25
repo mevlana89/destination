@@ -7,6 +7,9 @@
 2' : le user et celui par défaut créé par Spring
 
 3. il faut ajouter le jeu de donné ci dessous pour test :
+
+
+
 INSERT INTO `destination`.`destination` (`date_debut`, `date_fin`, `pays`) VALUES ('2021-06-30', '2021-07-07', 'France');
 INSERT INTO `destination`.`destination` (`date_debut`, `date_fin`, `pays`) VALUES ('2021-06-30', '2021-07-30', 'Allemagne');
 INSERT INTO `destination`.`destination` (`date_debut`, `date_fin`, `pays`) VALUES ('2021-08-30', '2021-09-30', 'Inde');
