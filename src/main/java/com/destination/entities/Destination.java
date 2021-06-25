@@ -13,7 +13,7 @@ public class Destination {
     private String dateDebut;
     private String dateFin;
 
-    @OneToMany(mappedBy = "destination")
+    @OneToMany(mappedBy = "destination", cascade = CascadeType.REMOVE)
     private List <Etape> etapes;
 
     public List<Etape> getEtapes() {

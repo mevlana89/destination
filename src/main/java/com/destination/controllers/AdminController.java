@@ -33,4 +33,10 @@ public class AdminController {
         adminService.save(destination);
         return "redirect:/admin";
     }
+
+    @PostMapping("/admin/destination/delete/{idDestination}")
+    public String removeDestionation(@PathVariable Long idDestination) {
+        adminService.remove(idDestination);
+        return "redirect:/admin";
+    }
 }

@@ -21,4 +21,9 @@ public class AdminService {
     {
         destinationRepository.save(destination);
     }
+
+    public void remove(Long idDestination)
+    {
+        destinationRepository.deleteById(idDestination);
+    }
 }
