@@ -21,4 +21,5 @@ public class DestinationController {
         model.addAttribute("destinationName", destinationService.findNameDestination(idDestionation) );
         return "destination";
     }
+
 }

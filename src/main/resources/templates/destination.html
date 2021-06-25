@@ -6,13 +6,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
     <meta charset="UTF-8">
-    <title>Destination.com | Destination</title>
+    <title>Destination.com | Destination </title>
 </head>
 <body>
 
 <header th:replace="fragments/header.html :: top"></header>
 <div class="container">
-    <h2 th:text="'Détail de la destination : '+ ${destinationName}"> Détail de la destination</h2>
+    <h2 th:text="'Les étapes de la destination : '+ ${destinationName}"> Détail de la destination</h2>
 </div>
 <div class="container">
     <div class="row">
@@ -22,13 +22,17 @@
                     <tr>
                         <th>Pays</th>
                         <th>Date de début</th>
-                        <th>Date de fin</th>
+                        <th>Résumé</th>
+                        <th>Liste des liens utiles</th>
                     </tr>
                     <tbody>
                     <tr th:each=" detail : ${destinationDetail}">
                         <td th:text="${detail.ville}">Ville</td>
                         <td th:text="${detail.dateDebutEtape}">dateDebut</td>
-                        <td th:text="${detail.resumeEtape}">dateFin</td>
+                        <td th:text="${detail.resumeEtape}">resumé</td>
+                        <td>
+                            <a class="nav-link" th:href="|@{/destination/etape/}${detail.id}|">Liens</a>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
