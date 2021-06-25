@@ -18,6 +18,7 @@ public class DestinationController {
     public String destinationDetail(Model model, @PathVariable Long idDestionation)
     {
         model.addAttribute("destinationDetail", destinationService.findAllEtapes(idDestionation) );
+        model.addAttribute("destinationName", destinationService.findNameDestination(idDestionation) );
         return "destination";
     }
 }

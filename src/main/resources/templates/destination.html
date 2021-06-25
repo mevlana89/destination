@@ -10,7 +10,10 @@
 </head>
 <body>
 
-
+<header th:replace="fragments/header.html :: top"></header>
+<div class="container">
+    <h2 th:text="'Détail de la destination : '+ ${destinationName}"> Détail de la destination</h2>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
