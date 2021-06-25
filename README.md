@@ -1,4 +1,4 @@
-# destination
+# destination - Etape pour test du projet 
 
 1 . Il faut créé la base de donnée avec via le fichier qui se trouve sous resources/createDatabase.sql
 
