@@ -13,7 +13,7 @@ public class Destination {
     private String dateDebut;
     private String dateFin;
 
-    @OneToMany
+    @OneToMany(mappedBy = "destination")
     private List <Etape> etapes;
 
     public List<Etape> getEtapes() {
