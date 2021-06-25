@@ -17,7 +17,7 @@ public class Etape {
     @JoinColumn(name = "destination_id")
     private Destination destination;
 
-    @OneToMany(mappedBy = "etape")
+    @OneToMany(mappedBy = "etape", orphanRemoval = true)
     private List<Lien> liens;
 
     public List<Lien> getLiens() {

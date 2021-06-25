@@ -13,7 +13,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
+                .antMatchers("/admin**").authenticated()
                 .anyRequest().permitAll();
+        http.formLogin();
+        http.httpBasic();
+        //Desactivation admin pour test
+//                http
+//                .authorizeRequests()
+//                .anyRequest().permitAll();
+//        http.formLogin();
+//        http.httpBasic();
     }
 
 }

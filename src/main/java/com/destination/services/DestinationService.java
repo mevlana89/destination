@@ -18,4 +18,8 @@ public class DestinationService {
 
         return destinationRepository.findById(idDestionation).get().getEtapes();
     }
+
+    public String findNameDestination(Long idDestionation) {
+        return destinationRepository.findById(idDestionation).get().getPays();
+    }
 }

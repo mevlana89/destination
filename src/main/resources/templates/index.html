@@ -10,11 +10,7 @@
 </head>
 <body>
 
-<!--<tr th:each=" pays : ${destinations}">-->
-<!--    <td th:text="${pays.}">Ville</td>-->
-<!--    <td th:text="${destination.dateDebut}">dateDebut</td>-->
-<!--    <td th:text="${destination.dateFin}">dateFin</td>-->
-<!--</tr>-->
+<header th:replace="fragments/header.html :: top"></header>
 
 <div class="container">
     <div class="row">
@@ -25,12 +21,16 @@
                         <th>Pays</th>
                         <th>Date de début</th>
                         <th>Date de fin</th>
+                        <th>Détail</th>
                     </tr>
                     <tbody>
                     <tr th:each=" destination : ${destinations}">
                         <td th:text="${destination.pays}">Ville</td>
                         <td th:text="${destination.dateDebut}">dateDebut</td>
                         <td th:text="${destination.dateFin}">dateFin</td>
+                        <td>
+                            <a class="nav-link" th:href="|@{/destination/}${destination.id}|">Detail</a>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
