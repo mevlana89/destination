@@ -1,6 +1,7 @@
 package com.destination.entities;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Etape {
@@ -13,7 +14,19 @@ public class Etape {
     private String resumeEtape;
 
     @ManyToOne
+    @JoinColumn(name = "destination_id")
     private Destination destination;
+
+    @OneToMany(mappedBy = "etape")
+    private List<Lien> liens;
+
+    public List<Lien> getLiens() {
+        return liens;
+    }
+
+    public void setLiens(List<Lien> liens) {
+        this.liens = liens;
+    }
 
     public Destination getDestination() {
         return destination;
